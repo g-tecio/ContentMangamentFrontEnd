@@ -1,40 +1,45 @@
 <template>
-  <v-app>
-    <v-toolbar>
-      <v-toolbar-title>
-        <v-btn icon to="/"><v-icon> home </v-icon></v-btn>
-        <!-- Estancias 2019 -->
-        {{this.$store.state.title}}
-      </v-toolbar-title>
-      <v-spacer/>
-      <v-toolbar-items>
-        <!-- SOY UN COMENTARIO -->
-        <v-icon>toc</v-icon>
-      </v-toolbar-items>
-    </v-toolbar>
-      <v-container>
-        <nuxt />
-      </v-container>
-   
-  </v-app>
+	<v-app>
+		<toolbar :config="drawer_props"/>
+		<drawer :config="drawer_props"/>
+			
+			<v-container>
+				<nuxt />
+			</v-container>
+	 
+	</v-app>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        clipped: false,
-        drawer: true,
-        fixed: false,
-        items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-        ],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Vuetify.js'
-      }
-    }
-  }
+	import toolbar from '~/components/navbar/toolbar'
+	import drawer from '~/components/navbar/drawer'
+	export default {
+		data() {
+			return {
+				clipped: false,
+				fixed: false,
+				items: [
+					{ icon: 'apps', title: 'Welcome', to: '/' },
+					{ icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+				],
+				drawer_props:{
+					drawer: null,
+					title: 'News page',
+					items: [
+								{ title: 'Home', icon: 'dashboard' },
+								{ title: 'About', icon: 'question_answer' }
+						],
+					social:[
+						{link: '/', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/300px-Facebook_icon_2013.svg.png'},
+						{link: '/home', img: 'https://pbs.twimg.com/profile_images/506125314469023744/WULlA9EJ.png'},
+						{link: '/home2', img: 'http://pluspng.com/img-png/instagram-png-instagram-png-logo-1455.png'},
+					]
+				}
+			}
+		},
+		components:{
+			drawer,
+			toolbar
+		}
+	}
 </script>
