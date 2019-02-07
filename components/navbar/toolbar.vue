@@ -1,9 +1,20 @@
 <template>
     <div>
-        <v-toolbar>
+        <v-toolbar
+            height="50px"
+            fixed
+            >
             <v-toolbar-items>
                 <v-btn icon @click="config.drawer = !config.drawer"><v-icon> toc </v-icon></v-btn>
             </v-toolbar-items>
+            <v-toolbar-title>
+                    <v-btn
+                    :href="'/'"
+                    flat>
+                        <v-icon>home</v-icon>
+                       home
+                    </v-btn>
+            </v-toolbar-title>
             <v-spacer></v-spacer>
                 <div v-for="item in config.social">
                     <v-card
@@ -11,8 +22,8 @@
                     flat
                     :img="item.img"
                     :to="item.link"
-                    width="40px"
-                    height="40px"
+                    width="30px"
+                    height="30px"
                     light
                     style="margin-left:10px">
                     </v-card>

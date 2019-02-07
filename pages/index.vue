@@ -1,11 +1,58 @@
 <template>
 	<v-container>
 		<v-layout align-center justify-center row class="text-xs-center">
-			<v-img 
-                src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_square-512.png"
-                max-width="30px"
-                max-height="30px"
-                 ></v-img>
+			<h1>index</h1>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h1>index</h1>
 		</v-layout>
 	</v-container>
 </template>
