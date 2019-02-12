@@ -3,17 +3,19 @@
         <v-toolbar
             height="50px"
             fixed
+            flat
             >
             <v-toolbar-items>
                 <v-btn icon @click="config.drawer = !config.drawer"><v-icon> toc </v-icon></v-btn>
-            </v-toolbar-items>
-            <v-toolbar-title>
                     <v-btn
                     :href="'/'"
                     flat>
                         <v-icon>home</v-icon>
+                        <div>&nbsp</div>
                        home
                     </v-btn>
+            </v-toolbar-items>
+            <v-toolbar-title>
             </v-toolbar-title>
             <v-spacer></v-spacer>
                 <div v-for="item in config.social">

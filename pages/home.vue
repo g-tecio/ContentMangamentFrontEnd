@@ -5,7 +5,7 @@
         width="700px"
         height="100px"
         aspect-ratio="1"
-        src="/img/banner.png"></v-img>
+        src="/img/banner2.png"></v-img>
     </div>
 </template>
 
