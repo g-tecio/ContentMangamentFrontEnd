@@ -1,18 +1,14 @@
 <template>
 	<v-app>
-		<toolbar :config="drawer_props"/>
-		<drawer :config="drawer_props"/>
-			
-			<v-container>
-				<nuxt />
-			</v-container>
-	 
+		<ligthbar></ligthbar>
+			<nuxt />
 	</v-app>
 </template>
 
 <script>
 	import toolbar from '~/components/navbar/toolbar'
 	import drawer from '~/components/navbar/drawer'
+	import ligthbar from '~/components/navbar/ligthbar'
 	export default {
 		data() {
 			return {
@@ -39,7 +35,8 @@
 		},
 		components:{
 			drawer,
-			toolbar
+			toolbar,
+			ligthbar
 		}
 	}
 </script>
