@@ -13,12 +13,20 @@
 		<hr>
 		<v-layout row >
 			<v-flex xs9>
-				<v-layot></v-layot>
+				<v-layout></v-layout>
 			</v-flex>
 			<v-flex xs3>
 				<mininews :config="mininews"></mininews>
 			</v-flex>
 		</v-layout>
+		<hr>
+		<br>
+        <v-layout>
+			<newsfooter></newsfooter>
+		</v-layout>
+		<br>
+		<hr>
+		<br>
 	</div>
 </template>
 
@@ -28,6 +36,7 @@ import TodayDate from '~/components/TodayDate'
 import ligthbar from '~/components/navbar/ligthbar'
 import infoContent from '~/components/infoContent'
 import mininews from '~/components/mininews'
+import newsfooter from '~/components/newsfooter'
 export default {
 	data(){
 		return{
@@ -50,23 +59,31 @@ export default {
 			mininews:[
                 {
                     title: 'Easy One head line',
-                    words: '438 words',
-                    date: 'Jan 2019'
+                    dates: {
+						words: '438 words',
+						date: 'Jan 2019'
+					}
                 },
                 {
                     title: 'Easy One head line',
-                    words: '438 words',
-                    date: 'Jan 2019'
+                   	dates:{ 
+						words: '438 words',
+						date: 'Jan 2019'
+					}
                 },
                 {
                     title: 'Easy One head line',
-                    words: '438 words',
-                    date: 'Jan 2019'
+                    dates:{
+						words: '438 words',
+						date: 'Jan 2019'
+					}
                 },
                 {
                     title: 'Easy One head line',
-                    words: '438 words',
-                    date: 'Jan 2019'
+                    dates:{
+						words: '438 words',
+						date: 'Jan 2019'
+					}
                 }
             ]
 		}
@@ -78,7 +95,8 @@ export default {
 		TodayDate,
 		ligthbar,
 		'info-content': infoContent,
-		mininews
+		mininews,
+		newsfooter
 	}
 }
 </script>

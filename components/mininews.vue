@@ -1,3 +1,4 @@
+import components from '../.nuxt/components/nuxt-child';
 <template>
     <div>
         <v-layout column fill-height>
@@ -16,7 +17,7 @@
                                         </v-flex>
                                         <div style="height:10px"></div>
                                         <v-flex>
-                                            <div> <span style="color:red">Read</span> <span>| {{item.words}} |</span> <span>{{item.date}}</span> </div>
+                                            <dates :config="item.dates"></dates>
                                         </v-flex>
                                     </v-layout>
                                 </v-card-title>
@@ -30,11 +31,15 @@
 </template>
 
 <script>
+import dates from '~/components/dates'
 export default {
     props:['config'],
     data(){
         return{
         }
+    },
+    components:{
+        dates
     }
 }
 </script>
