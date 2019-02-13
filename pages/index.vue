@@ -11,6 +11,14 @@
 		<hr>
 		<br>
 		<hr>
+		<v-layout row >
+			<v-flex xs9>
+				<v-layot></v-layot>
+			</v-flex>
+			<v-flex xs3>
+				<mininews :config="mininews"></mininews>
+			</v-flex>
+		</v-layout>
 	</div>
 </template>
 
@@ -19,6 +27,7 @@ import optionmenu from '~/components/navbar/optionmenu'
 import TodayDate from '~/components/TodayDate'
 import ligthbar from '~/components/navbar/ligthbar'
 import infoContent from '~/components/infoContent'
+import mininews from '~/components/mininews'
 export default {
 	data(){
 		return{
@@ -37,7 +46,30 @@ export default {
                 'Food',
                 'Travel',
                 'Magazine'
-            ]}
+			],
+			mininews:[
+                {
+                    title: 'Easy One head line',
+                    words: '438 words',
+                    date: 'Jan 2019'
+                },
+                {
+                    title: 'Easy One head line',
+                    words: '438 words',
+                    date: 'Jan 2019'
+                },
+                {
+                    title: 'Easy One head line',
+                    words: '438 words',
+                    date: 'Jan 2019'
+                },
+                {
+                    title: 'Easy One head line',
+                    words: '438 words',
+                    date: 'Jan 2019'
+                }
+            ]
+		}
 	},
 	methods:{
 	},
@@ -45,7 +77,8 @@ export default {
 		optionmenu,
 		TodayDate,
 		ligthbar,
-		'info-content': infoContent
+		'info-content': infoContent,
+		mininews
 	}
 }
 </script>
