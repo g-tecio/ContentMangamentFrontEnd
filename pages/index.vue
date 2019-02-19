@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<v-layout align-center justify-center column >
-			<TodayDate class="complete-width"></TodayDate>
+			<TodayDate class="complete-width font_cutive"></TodayDate>
 			<br>
-			<optionmenu class="complete-width" :config="option_Menu" ></optionmenu>
+			<optionmenu class="complete-width font_cutive" :config="option_Menu" ></optionmenu>
 		</v-layout>
 		<div>
-			<info-content></info-content>
+			<info-content class="font_cutive"></info-content>
 		</div>
 		<hr>
 		<br>
@@ -22,11 +22,14 @@
 		<hr>
 		<br>
         <v-layout>
-			<newsfooter></newsfooter>
+			<v-flex>
+				<newsfooter></newsfooter>
+			</v-flex>
 		</v-layout>
 		<br>
 		<hr>
 		<br>
+		<newsbottom></newsbottom>
 	</div>
 </template>
 
@@ -37,6 +40,7 @@ import ligthbar from '~/components/navbar/ligthbar'
 import infoContent from '~/components/infoContent'
 import mininews from '~/components/mininews'
 import newsfooter from '~/components/newsfooter'
+import newsbottom from '~/components/newsbottom'
 export default {
 	data(){
 		return{
@@ -96,11 +100,14 @@ export default {
 		ligthbar,
 		'info-content': infoContent,
 		mininews,
-		newsfooter
+		newsfooter,
+		newsbottom
 	}
 }
 </script>
 <style lang="stylus">
 	.complete-width
 		width 100%
+	.font_cutive
+		font-family: 'Cutive'
 </style>

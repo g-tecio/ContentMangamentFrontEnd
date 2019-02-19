@@ -1,48 +1,20 @@
 <template>
     <!-- <div> -->
-        <v-layout row fill-height>
-            <v-flex xs12 v-for="item in items" :key="item">
-                <v-card flat>
-                  <v-layout row>
-                        <div>
-                            <v-card-title>
-                                <v-layout column>
-                                    <div class="headline">
-                                        {{item.title}} 
-                                    </div>
-                                    <br>
-                                    <div><dates :config="item.dates"></dates></div>
-                                    <br>
-                                    <div>{{item.content}}</div>
-                                </v-layout>
-                            </v-card-title>
-                            <v-card-actions>
-                                <minidate style="color:blue" :config="item.minidate"></minidate>
-                                <v-spacer></v-spacer>
-                                <div>
-                                    <span>ver mas...</span>
-                                </div>
-                            </v-card-actions>
-                        </div>
-                        <div>
-                            <v-img 
-                            :src="item.img"
-                            aspect-ratio=1
-                            max-height="300px"
-                            width="250px"
-                            ></v-img>
-                        </div>
-                        <div class="linevnf"></div>
-                  </v-layout>
-                </v-card>
+        <v-layout row wrap>
+            <v-flex xs12 md6>
+                <content1 :config="items[0]">
+                    <div slot="line" class="linevnf"></div>
+                </content1>
+            </v-flex> 
+            <v-flex xs12 md6>
+                <content1 :config="items[1]"></content1>
             </v-flex>
         </v-layout>
     <!-- </div> -->
 </template>
 
 <script>
-import minidate from '~/components/minidate'
-import dates from '~/components/dates'
+import content1 from '~/components/contents/content1'
 export default {
     data(){
         return{
@@ -65,18 +37,11 @@ export default {
         }
     },
     components:{
-        minidate,
-        dates
+        content1
     }
 }
 </script>
 
 <style lang="stylus">
-    .linevnf
-        background black
-        width 1px
-        height 250px
-        border-width 1px
-        border-color black
-        margin 15px
+    
 </style>

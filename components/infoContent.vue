@@ -16,7 +16,7 @@
                         <v-flex xs7>
                         <v-card-title primary-title>
                             <div>
-                                <div class="headline">{{item.title}}</div>
+                                <div class="headtitle">{{item.title}}</div>
                                 <div>{{item.content}}</div>
                             </div>
                         </v-card-title>
@@ -27,8 +27,12 @@
                 </v-layout>
             </v-flex>
             <v-flex>
-                <v-layout align-center justify-center fill-height>
-                    <p>Money</p>
+                <v-layout align-center justify-center fill-height row>
+                    <v-flex xs4>
+                        <div><v-icon>attach_money</v-icon></div>
+                        <div><v-icon>attach_money</v-icon></div>
+                    </v-flex>
+                    <v-flex xs4>Money</v-flex>
                 </v-layout>
             </v-flex>
             <div class="linev"></div>
@@ -57,9 +61,12 @@ export default {
 <style lang="stylus">
 .linev
     background black
-    width 3px
-    height 100px
+    width 1px
+    height 120px
     border-width 10px
     border-color black
     margin-right 15px
+.headtitle
+    font-family 'Cutive'
+    font-size 20px
 </style>

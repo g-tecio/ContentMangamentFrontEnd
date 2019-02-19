@@ -1,11 +1,11 @@
 <template>
     <div>
         <v-layout column fill-height>
-            <v-flex style="margin-left: 9%; margin-right:12%">
+            <v-flex style="margin-left: 8%; margin-right:11%">
                 <v-layout row fill-height align-center justify-center>
                     <!-- <v-flex xs3></v-flex> -->
                     <v-flex xs1 v-for="item in config" :key="item">
-                        <v-btn small flat>
+                        <v-btn class="buttontxt" small flat>
                             {{item}}
                         </v-btn>
                     </v-flex>
@@ -39,4 +39,8 @@ export default {
         border-color black
     .upper
         margin-bottom  -15px
+    .buttontxt
+        font-size 10px
+        font-weight bold
+        width 12px
 </style>

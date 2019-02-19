@@ -5,7 +5,6 @@ import components from '../.nuxt/components/nuxt-child';
             <v-flex v-for="item in config" :key="item">
                 <v-layout row fill-height style="width:100%;">
                     <v-flex >
-                        <div class="linevmn"></div>
                     </v-flex>
                     <v-flex xs12>
                         <!-- <v-layout fill-height> -->
@@ -22,6 +21,7 @@ import components from '../.nuxt/components/nuxt-child';
                                     </v-layout>
                                 </v-card-title>
                             </v-card>
+                        <div class="linevmn"></div>
                         <!-- </v-layou> -->
                     </v-flex>
                 </v-layout>
@@ -48,9 +48,10 @@ export default {
 
 .linevmn
     background black
-    width 3px
-    height 70px
+    height 1px
+    margin-left 5%
+    width 90%
     border-width 10px
     border-color black
-    margin-top 15px
+    margin-bottom 5px
 </style>

@@ -1,14 +1,17 @@
 <template>
     <div>
         <v-icon>reorder</v-icon>
+        <v-icon>search</v-icon>
         <v-layout class="" align-center justify-center row>
             <div style="margin-left: 30px"></div>
-            <v-flex class="upper">
-                <p>{{TodayDate}} </p>
+            <v-flex xs2 class="upper">
+                <p class="litletxt">{{TodayDate}} </p>
             </v-flex>
             <v-spacer></v-spacer>
-            <v-flex xs1 class="upper">
-                <p>{{place}}</p>
+            <h1 class="bigtxt">EL GENERAL</h1>
+            <v-spacer></v-spacer>
+            <v-flex xs2 class="upper">
+                <p class="litletxt">{{place}}</p>
             </v-flex>
         </v-layout>
         <v-flex>
@@ -47,5 +50,9 @@ export default {
         border-width 10px
         border-color black
     .upper
-        margin-bottom  -15px
+        margin-bottom  -50px
+    .litletxt
+        font-size 10px
+    .bigtxt
+        font-size 50px
 </style>
