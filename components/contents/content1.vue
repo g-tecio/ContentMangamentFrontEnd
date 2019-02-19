@@ -18,7 +18,7 @@
                         <minidate style="color:blue" :config="config.minidate"></minidate>
                         <v-spacer></v-spacer>
                         <div>
-                            <span><a href="">ver mas...</a></span>
+                            <span><a href="">See More...</a></span>
                         </div>
                     </v-card-actions>
                 </div>
