@@ -8,8 +8,8 @@
                             <div class="headline">
                                 {{config.title}} 
                             </div>
+                            <br>
                             <div><dates :config="config.dates"></dates></div>
-                            <div>{{config.content}}</div>
                         </v-layout>
                     </v-card-title>
                     <v-card-actions>
@@ -20,15 +20,6 @@
                         </div>
                     </v-card-actions>
                 </div>
-                <div>
-                    <v-img 
-                    :src="config.img"
-                    aspect-ratio=1
-                    max-height="300px"
-                    width="250px"
-                    ></v-img>
-                </div>
-                <slot name="line"></slot>
             </v-layout>
         </v-card>
     </div>

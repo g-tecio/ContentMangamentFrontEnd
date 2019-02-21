@@ -8,12 +8,14 @@
 		<div>
 			<info-content class="font_cutive"></info-content>
 		</div>
+		<hr style="margin-bottom:10px">
 		<hr>
 		<br>
-		<hr>
 		<v-layout row >
 			<v-flex xs9>
-				<v-layout></v-layout>
+				<v-layout>
+					<newsbody></newsbody>
+				</v-layout>
 			</v-flex>
 			<v-flex xs3>
 				<mininews :config="mininews"></mininews>
@@ -38,6 +40,7 @@ import optionmenu from '~/components/navbar/optionmenu'
 import TodayDate from '~/components/TodayDate'
 import ligthbar from '~/components/navbar/ligthbar'
 import infoContent from '~/components/infoContent'
+import newsbody from '~/components/newsbody'
 import mininews from '~/components/mininews'
 import newsfooter from '~/components/newsfooter'
 import newsbottom from '~/components/newsbottom'
@@ -99,6 +102,7 @@ export default {
 		TodayDate,
 		ligthbar,
 		'info-content': infoContent,
+		newsbody,
 		mininews,
 		newsfooter,
 		newsbottom

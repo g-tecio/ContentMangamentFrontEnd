@@ -4,29 +4,23 @@
             <v-layout row>
                 <div>
                     <v-card-title>
-                        <v-layout column>
-                            <div class="headline">
-                                {{config.title}} 
-                            </div>
-                            <div><dates :config="config.dates"></dates></div>
-                            <div>{{config.content}}</div>
-                        </v-layout>
+                    <div>
+                        <v-img 
+                        :src="config.img"
+                        aspect-ratio=1
+                        max-height="200px"
+                        width="450px"
+                        ></v-img>
+                    </div>
                     </v-card-title>
                     <v-card-actions>
-                        <minidate style="color:blue" :config="config.minidate"></minidate>
+                        <p>Times are changin fast and while some of us were simply..</p>
+                        <!-- <minidate style="color:blue" :config="config.minidate"></minidate> -->
                         <v-spacer></v-spacer>
                         <div>
                             <span><a href="">See More...</a></span>
                         </div>
                     </v-card-actions>
-                </div>
-                <div>
-                    <v-img 
-                    :src="config.img"
-                    aspect-ratio=1
-                    max-height="300px"
-                    width="250px"
-                    ></v-img>
                 </div>
                 <slot name="line"></slot>
             </v-layout>
