@@ -16,7 +16,7 @@
                         <minidate style="color:blue" :config="config.minidate"></minidate>
                         <v-spacer></v-spacer>
                         <div>
-                            <span><a href="">See More...</a></span>
+                            <span><nuxt-link to="/new">See More...</nuxt-link></span>
                         </div>
                     </v-card-actions>
                 </div>
